@@ -1,0 +1,39 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:  DMM.h
+ *
+ *    Description:  This contains the function declarations for DMM.c
+ *
+ *        Version:  1.0
+ *        Created:  1/25/2017 7:30:11 PM
+ *       Revision:  none
+ *       Compiler:  msft c
+ *
+ *         Author:  Edgar Perez (eap), edgar.a.perez@wsu.edu
+ *   Organization:  Washington State University
+ *
+ * =====================================================================================
+ */
+
+#ifndef _DMM_H
+#define _DMM_H
+
+typedef struct duration {
+	int seconds;
+	int minutes;
+} Duration;
+
+typedef struct song {
+	char artist[100];
+	char album[100];
+	char song[200];
+	char genre[100];
+	Duration time;
+	int plays;
+	int rating;
+	struct song *before;
+	struct song *after;
+} Song;
+
+#endif // !_DMM_H
